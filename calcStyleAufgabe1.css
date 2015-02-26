@@ -1,0 +1,44 @@
+* {
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: bold 1rem Arial;
+}
+body {
+    display: table;
+    width: 400px;
+    height: auto;
+    margin: auto;
+    padding: 5px 5px 5px 5px;
+}
+input {
+    text-align: right;
+    border: none;
+    background-color: lightgoldenrodyellow;
+    padding: 10px 10px 10px 10px;
+}
+input[type='button'] {
+    display: table-cell;
+    text-align: right;
+    background: none;
+}
+.header {
+    background: lightgoldenrodyellow;
+    text-align: right;
+    clear: both;
+}
+.numberFields {
+    background-color: mediumseagreen;
+    display: table-row;
+    float: left;
+}
+.operations {
+    background-color: indianred;
+    float: right;
+}
+.sum {
+    background-color: indianred;
+    text-align: center;
+    clear: both;
+}
