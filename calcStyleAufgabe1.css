@@ -1,44 +1,64 @@
 * {
-    border: 1px solid black;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font: bold 1rem Arial;
+    text-align: center;
+
 }
-body {
-    display: table;
+input {
+    height: 3rem;
+}
+body > div{
+    box-sizing: border-box;
+    border: 1px solid black;
     width: 400px;
-    height: auto;
     margin: auto;
     padding: 5px 5px 5px 5px;
 }
-input {
+.header input {
+    background: lightgoldenrodyellow;
+    box-sizing: border-box;
+    border-color: black;
     text-align: right;
-    border: none;
-    background-color: lightgoldenrodyellow;
-    padding: 10px 10px 10px 10px;
-}
-input[type='button'] {
-    display: table-cell;
-    text-align: right;
-    background: none;
+    width: 100%;
 }
 .header {
-    background: lightgoldenrodyellow;
-    text-align: right;
+    height: 10%;
+    width: 100%;
     clear: both;
+    padding: 0px 0px 5px 0px;
 }
-.numberFields {
+.numberFields input {
     background-color: mediumseagreen;
-    display: table-row;
+    border-color: black;
+    float: left;
+    width: 33%;
+}
+.numberFields input:last-child{
+    width: 99%;
     float: left;
 }
-.operations {
+.numberFields {
+    float: left;
+    width: 90%;
+    display: inline-block;
+}
+.operations input{
     background-color: indianred;
+    border-color: black;
     float: right;
+    width: 100%;
+}
+.operations {
+    float: right;
+    width: 10%;
+    display: inline-block;
+}
+.sum input {
+    background-color: indianred;
+    border-color: black;
+    width: 100%;
 }
 .sum {
-    background-color: indianred;
-    text-align: center;
-    clear: both;
+    width: 100%;
+    display: inline-block;
+    padding: 5px 0px 0px 0px;
 }
