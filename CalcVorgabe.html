@@ -5,15 +5,16 @@
     <title>Testat 1</title>
     <!-- Aufgabe 1 -->
     <link rel="stylesheet" href="calcStyleAufgabe1.css"/>
+    <script src="calcBrain.js"></script>
     <!-- Aufgabe 2 -->
     <!--<link rel="stylesheet" href="calcStyleAufgabe2.css"/>-->
 </head>
-<body>
+<body onload="setOnClickEvents()">
 <div>
     <div class="header">
-        <input name="1" value="1" disabled  />
+        <input name="display" value="0" disabled  />
     </div>
-    <div class="numberFields">
+    <div id="numbersField" class="numberFields">
         <input type="button" name="1" value="1"/>
         <input type="button" name="2" value="2"/>
         <input type="button" name="3" value="3"/>
