@@ -15,7 +15,7 @@ jQuery.noConflict();
     var pattern = new RegExp("[^0-9]");
 
     function onClickCalculations(name){
-        displayValue = $('#output').val();
+        var displayValue = $('#output').val();
 
         switch (name){
             case "=":
