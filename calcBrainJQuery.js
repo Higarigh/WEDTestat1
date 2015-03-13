@@ -42,7 +42,7 @@ jQuery.noConflict();
 
                     calculated = false;
                 }
-                if(displayValue == 0){
+                if(displayValue === 0){
                     displayValue = name;
                 }else {
 
