@@ -36,8 +36,7 @@ jQuery.noConflict();
 			case "*":
 			case "/":
 				if (WED_TESTAT.REGEX_PATTERN.test(display_value.slice(-1))) {
-					display_value = display_value.slice(0,
-						display_value.length - 2) + name + " ";
+					display_value = display_value.slice(0, display_value.length - 2) + name + " ";
 				} else {
 					display_value += " " + name + " ";
 				}
