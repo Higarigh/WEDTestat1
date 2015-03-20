@@ -14,6 +14,7 @@ WED_TESTAT.REGEX_PATTERN = new RegExp("[^0-9]");
 WED_TESTAT.CALCULATED = Boolean(false);
 jQuery.noConflict();
 (function ($) {
+	$.getScript("math.min.js", function(){});
 	$(function () {
 		$("body").on("click", "input[type=button]", function () {
 			onClickCalculations(this.name);
@@ -27,7 +28,7 @@ jQuery.noConflict();
 		var display_value = $("#output").val();
 		switch (name) {
 			case "=":
-				display_value = eval(display_value);
+				display_value = mathjs.eval(display_value);
 				WED_TESTAT.CALCULATED = Boolean(true);
 				break;
 			case "+":
