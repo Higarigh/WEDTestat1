@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var http = require('http');
+fs = require('fs');
+var url = require('url');
+
+function sendFile(res, fileName, contentType)
+{
+	fs.readFile(fileName, function (err, data) {
+		if (err) {
+			throw err;
+		}
+		res.writeHeader(200, {"Content-Type": contentType});
+		res.write(data);
+		res.end();
+	});
+}
+
+http.createServer(function(req, res) {
+	var url = req.url.toLowerCase();
+	if(url=="/" || url=="/index.html" || url == "/calc.html") {
+		sendFile(res,"public/html/CalcVorgabe.html","text/html");
+	}else if(url=="/calcbrainjquery.js"){
+		sendFile(res,"public/javascripts/calcBrainJQuery.js","text/javascript");
+	}
+	else if(url.indexOf("/math.min.js")==0){
+		sendFile(res,"public/javascripts/math.min.js","text/javascript");
+	}
+	else if(url=="/calcstyleaufgabe1.css"){
+		sendFile(res,"public/stylesheets/calcStyleAufgabe2.css","text/css");
+	}
+}).listen(80);
+
+console.log('Server running at http://localhost:80/');
+
